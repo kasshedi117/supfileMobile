@@ -1,0 +1,32 @@
+page-contact {
+
+    .myview {
+        background-color: transparent;
+            background-image: url(../assets/imgs/supinfo.jpg);
+            width: 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+    }
+    ion-content {
+        ion-label{
+            text-align: center;
+        }
+        background-color: #82C521;
+        ion-icon {
+            font-size:4rem;
+            padding-top:2.8rem;
+            padding-left:2rem;
+        }
+        ion-img {
+            img{
+                border-radius:50%;
+            }
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+}
+

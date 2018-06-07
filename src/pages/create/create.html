@@ -1,0 +1,87 @@
+<ion-header >
+  <ion-navbar >
+    <ion-title >
+        Create An Account
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="myview">
+
+   <div>
+      <ion-item *ngIf="isEdited && !hideForm">
+         <button
+            ion-button
+            item-right
+            color="secondary"
+            text-center
+            block
+            (click)="deleteEntry()">Remove this Entry?</button>
+      </ion-item>
+
+
+      <div *ngIf="hideForm">
+         <ion-item class="post-entry-message" text-wrap>
+            <h2>Success!</h2>
+            <p>Maybe you'd like to edit an existing entry or add a new record?</p>
+            <p>Simply go back to the home page and select the option you want to pursue.</p>
+         </ion-item>
+      </div>
+
+
+      <div *ngIf="!hideForm">
+         <form [formGroup]="form" (ngSubmit)="saveEntry()">
+
+            <ion-list>
+               <ion-item-group>
+                  <ion-item-divider color="light">User FirstName *</ion-item-divider>
+                  <ion-item>
+                     <ion-input
+                        type="text"
+                        placeholder="Enter a firstName..."
+                        formControlName="firstName"
+                        [(ngModel)]="userFirstName"></ion-input>
+                  </ion-item>
+               </ion-item-group>
+
+
+               <ion-item-group>
+                  <ion-item-divider color="light">User LastName *</ion-item-divider>
+                  <ion-item>
+                     <ion-input
+                        placeholder="lastName..."
+                        formControlName="lastName"
+                        [(ngModel)]="userDescription"></ion-input>
+                  </ion-item>
+               </ion-item-group>
+
+               <ion-item-group>
+                  <ion-item-divider color="light">user Password *</ion-item-divider>
+                  <ion-item>
+                     <ion-input
+                        placeholder="password"
+                        formControlName="password"
+                        [(ngModel)]="userPassword"></ion-input>
+                  </ion-item>
+               </ion-item-group>
+
+               <ion-item class="button-save">
+                  <button
+                     ionjgT-button
+                     color="primary"
+                     text-center
+                     block
+                     [disabled]="!form.valid">Save Entry</button>
+               </ion-item>
+
+            </ion-list>
+
+         </form>
+      </div>
+   </div>
+
+
+
+</ion-content>
+
+

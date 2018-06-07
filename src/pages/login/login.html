@@ -1,0 +1,34 @@
+<ion-header >
+  <ion-navbar >
+    <ion-title >
+        Login Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="myview">
+    <ion-list >
+        <ion-item >
+              <ion-label floating >FirstName</ion-label>
+              <ion-input type="text" [(ngModel)]="userFirstName" ></ion-input>
+        </ion-item>
+
+        <ion-item >
+             <ion-label floating >Password</ion-label>
+             <ion-input type="password" value="" [(ngModel)]="userPassword" ></ion-input>
+        </ion-item>
+
+     </ion-list >
+
+          <div padding >
+               <button ion-button color="primary" block  (click)="buttonSignInClicked()">Sign In</button>
+          </div>
+
+          <div padding >
+               <button ion-button color="primary" block (click)="buttonCreateAnAccountClicked()">Create An Account</button>
+          </div>
+
+</ion-content>
+
+

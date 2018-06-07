@@ -1,0 +1,26 @@
+page-create {
+    ion-item
+    {
+        background-color: #E1E4ED !important;
+            margin-bottom: 20px !important;
+    }
+
+    .button-save{
+        text-align: center;
+    }
+    ion-label{
+        button{
+                font-size: larger;
+                color : black;
+        }
+    }
+    .myview {
+        background-color: transparent;
+            background-image: url(../assets/imgs/supinfo.jpg);
+            width: 100%;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+    }
+
+}
